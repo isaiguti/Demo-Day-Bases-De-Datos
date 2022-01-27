@@ -1,0 +1,20 @@
+[{$lookup: {
+ from: 'movies',
+ localField: 'movie_id',
+ foreignField: '_id',
+ as: 'pelicula_lista'
+}}, {$addFields: {
+ pelicula: {
+  $arrayElemAt: [
+   '$pelicula_lista',
+   0
+  ]
+ }
+}}, {$addFields: {
+ pelicula_nombre: '$pelicula.title'
+}}, {$project: {
+ _id: 0,
+ pelicula_nombre: 1,
+ name: 1,
+ text: 1
+}}]

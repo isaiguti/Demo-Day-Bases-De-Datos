@@ -1,0 +1,9 @@
+[{$project: {
+ amenities: 1
+}}, {$match: {
+ amenities: {
+  $in: [
+   RegExp('(Wifi)|(Ethernet)')
+  ]
+ }
+}}, {$count: 'Publicaciones con conexión a internet'}]
