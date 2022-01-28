@@ -1,5 +1,5 @@
 # Demo Day
 
-# Proyecto: IOWA LIQUOR SALES
+## Proyecto: IOWA LIQUOR SALES
 
-# Curso Data Analysis (MongoDB y MySQL)
+## Curso Data Analysis Bedu (MongoDB y MySQL)
