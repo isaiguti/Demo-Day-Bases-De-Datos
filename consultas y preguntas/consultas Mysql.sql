@@ -152,5 +152,7 @@ select distinct city, count(store_number) as no_sucursales
     group by city
     order by no_sucursales desc limit 20;
 
-    
+    create view  utilidad_producto as select i.item_description, (state_bottle_retail-state_bottle_cost) as utilidad
+	from items i join sales s on i.item_number = s.item_number
+	group by i.item_number;
         
